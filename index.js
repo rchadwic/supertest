@@ -22,7 +22,7 @@ module.exports = function(app){
 
   methods.forEach(function(method){
     obj[method] = function(url){
-      return new Test(app, method, url);
+      return new Test(app, method.toUpperCase(), url);
     };
   });
 
